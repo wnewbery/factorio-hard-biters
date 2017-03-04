@@ -1,0 +1,8 @@
+{
+    "description": "Increase biter difficultly by increasing aggressiveness and reducing opportunities to reduce spawns",
+    "author": "William Newbery",
+    "factorio_version": "0.14",
+    "name": "HardBiters",
+    "version": "0.1.1",
+    "title": "Hard Biters"
+}
