@@ -101,7 +101,7 @@ function expansion_6_spawn(surface)
     count = count + 1
     local i = math.random(#locations)
     local location = {locations[i][1] + 16, locations[i][2] + 16}
-    local size = expansion_size_factor * surface.get_pollution(location)
+    local size = expansion_size_fn(surface.get_pollution(location))
     table.insert(filtered, locations[i])
     table.remove(locations, i)
     -- log("build base: " .. location[1] .. "," .. location[2])
@@ -114,7 +114,7 @@ end
 
 -- Check if a base was actually spawned
 function expansion_check_spawn_results(surface)
-  local locations = global.expansion_state
+  local locations = global.expansion_state.temp
   for k,v in pairs(locations) do
     local x = v[1]
     local y = v[2]

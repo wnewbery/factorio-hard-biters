@@ -31,7 +31,7 @@ min_expansion_player_distance = 48
 max_expansion_player_distance = 128
 
 -- Factor to multiply chunk pollution by to give the size of the new base.
-expansion_size_factor = 200/7000
+expansion_size_fn = function(pollution) return 5 * math.log(pollution) end
 -- If true, sets map_settings.enemy_expansion.enabled = false
 disable_vanilla_expansion = true
 
